@@ -1,5 +1,5 @@
 import { devis } from './devis';
-import panorama from './18-shakti-devis-divine-panorama-v5.webp';
+import panorama from './18-shakti-devis-divine-panorama-v6.webp';
 
 export default function App() {
   return (
@@ -29,13 +29,6 @@ export default function App() {
             src={panorama}
             alt="Divine panorama showing all 18 Shakti Peetha Devis with sacred background"
           />
-          <div className="devi-labels-overlay">
-            {devis.map((devi) => (
-              <span key={devi.id} className="devi-label">
-                {devi.name}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 
