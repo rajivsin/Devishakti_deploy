@@ -20,6 +20,7 @@ import devi18 from './devi-18-bamleshwari.webp';
 export interface Devi {
   id: number;
   name: string;
+  slug: string;
   shaktiPeetha: string;
   location: string;
   description: string;
@@ -55,6 +56,7 @@ const deviImages: Record<number, string> = {
 interface DeviData {
   id: number;
   name: string;
+  slug: string;
   shaktiPeetha: string;
   location: string;
   description: string;
@@ -69,6 +71,7 @@ const devisData: DeviData[] = [
   {
     id: 1,
     name: 'Mahalakshmi',
+    slug: 'mahalakshmi',
     shaktiPeetha: 'Kolhapur, Maharashtra',
     location: 'Maharashtra',
     description: 'Goddess of wealth, fortune, and prosperity, seated on a pink lotus.',
@@ -82,6 +85,7 @@ const devisData: DeviData[] = [
   {
     id: 2,
     name: 'Mahadurga',
+    slug: 'mahadurga',
     shaktiPeetha: 'Vaishno Devi',
     location: 'Jammu & Kashmir',
     description: 'The invincible warrior goddess who rides a lion and wields weapons.',
@@ -95,6 +99,7 @@ const devisData: DeviData[] = [
   {
     id: 3,
     name: 'Mahakali',
+    slug: 'mahakali',
     shaktiPeetha: 'Ujjain, Madhya Pradesh',
     location: 'Madhya Pradesh',
     description: 'The fierce destroyer of evil, dark-complexioned, standing on Lord Shiva.',
@@ -108,6 +113,7 @@ const devisData: DeviData[] = [
   {
     id: 4,
     name: 'Mahasaraswati',
+    slug: 'mahasaraswati',
     shaktiPeetha: 'Sharada / Kashmir',
     location: 'Jammu & Kashmir',
     description: 'Goddess of knowledge, wisdom, and arts, playing the veena, riding a swan.',
@@ -121,6 +127,7 @@ const devisData: DeviData[] = [
   {
     id: 5,
     name: 'Mahaparvati',
+    slug: 'mahaparvati',
     shaktiPeetha: 'Various Parvati traditions',
     location: 'Pan-India',
     description: 'The divine mother of the Himalayas, consort of Lord Shiva.',
@@ -134,6 +141,7 @@ const devisData: DeviData[] = [
   {
     id: 6,
     name: 'Maa Kamakhya',
+    slug: 'kamakhya',
     shaktiPeetha: 'Guwahati, Assam',
     location: 'Assam',
     description: 'Tantric goddess of desire and creation, the bleeding goddess of Assam.',
@@ -147,6 +155,7 @@ const devisData: DeviData[] = [
   {
     id: 7,
     name: 'Maa Kamakshi',
+    slug: 'kamakshi',
     shaktiPeetha: 'Kanchipuram, Tamil Nadu',
     location: 'Tamil Nadu',
     description: 'The goddess whose eyes are full of love, holding a sugarcane bow and arrows.',
@@ -160,6 +169,7 @@ const devisData: DeviData[] = [
   {
     id: 8,
     name: 'Maa Bhramaramba',
+    slug: 'bhramaramba',
     shaktiPeetha: 'Srisailam, Andhra Pradesh',
     location: 'Andhra Pradesh',
     description: 'Goddess in the form of a bee, the divine mother of Srisailam.',
@@ -173,6 +183,7 @@ const devisData: DeviData[] = [
   {
     id: 9,
     name: 'Maa Chamundeshwari',
+    slug: 'chamundeshwari',
     shaktiPeetha: 'Mysuru, Karnataka',
     location: 'Karnataka',
     description: 'Slayer of demons Chanda and Munda, riding a lion on Chamundi Hill.',
@@ -186,6 +197,7 @@ const devisData: DeviData[] = [
   {
     id: 10,
     name: 'Maa Jogulamba',
+    slug: 'jogulamba',
     shaktiPeetha: 'Alampur, Telangana',
     location: 'Telangana',
     description: 'Fierce goddess with scorpion symbolism, one of the Ashtadasha Shakti Peethas.',
@@ -199,6 +211,7 @@ const devisData: DeviData[] = [
   {
     id: 11,
     name: 'Maa Vishalakshi',
+    slug: 'vishalakshi',
     shaktiPeetha: 'Varanasi, Uttar Pradesh',
     location: 'Uttar Pradesh',
     description: 'The large-eyed goddess worshipped at the sacred ghats of the Ganges.',
@@ -212,6 +225,7 @@ const devisData: DeviData[] = [
   {
     id: 12,
     name: 'Maa Mangala Gauri',
+    slug: 'mangala-gauri',
     shaktiPeetha: 'Gaya, Bihar',
     location: 'Bihar',
     description: 'The auspicious four-armed goddess, worshipped for wellbeing and fortune.',
@@ -225,6 +239,7 @@ const devisData: DeviData[] = [
   {
     id: 13,
     name: 'Maa Jwalamukhi',
+    slug: 'jwalamukhi',
     shaktiPeetha: 'Kangra, Himachal Pradesh',
     location: 'Himachal Pradesh',
     description: 'The flaming goddess, where eternal blue flames burn from the rock as her tongue.',
@@ -238,6 +253,7 @@ const devisData: DeviData[] = [
   {
     id: 14,
     name: 'Maa Manikyamba',
+    slug: 'manikyamba',
     shaktiPeetha: 'Draksharamam, Andhra Pradesh',
     location: 'Andhra Pradesh',
     description: 'The ruby-hued goddess, with precious gem symbolism at Draksharamam.',
@@ -251,6 +267,7 @@ const devisData: DeviData[] = [
   {
     id: 15,
     name: 'Maa Puruhutika',
+    slug: 'puruhutika',
     shaktiPeetha: 'Pithapuram, Andhra Pradesh',
     location: 'Andhra Pradesh',
     description: 'Goddess who fulfills all desires, the beloved deity of Pithapuram.',
@@ -264,6 +281,7 @@ const devisData: DeviData[] = [
   {
     id: 16,
     name: 'Maa Biraja',
+    slug: 'biraja',
     shaktiPeetha: 'Jajpur, Odisha',
     location: 'Odisha',
     description: 'Fierce goddess with a spear, riding a buffalo, the presiding deity of Jajpur.',
@@ -277,6 +295,7 @@ const devisData: DeviData[] = [
   {
     id: 17,
     name: 'Maa Ekaveerika',
+    slug: 'ekaveerika',
     shaktiPeetha: 'Mahur, Maharashtra',
     location: 'Maharashtra',
     description: 'Fierce form of the goddess Renuka, mother of Parashurama, at Mahur.',
@@ -290,6 +309,7 @@ const devisData: DeviData[] = [
   {
     id: 18,
     name: 'Maa Bamleshwari',
+    slug: 'bamleshwari',
     shaktiPeetha: 'Dongargarh, Chhattisgarh',
     location: 'Chhattisgarh',
     description: 'The divine Mother Goddess of Dongargarh, a form of Durga Devi, atop a 1,600-foot hill.',
@@ -306,3 +326,7 @@ export const devis: Devi[] = devisData.map((d) => ({
   ...d,
   image: deviImages[d.id],
 }));
+
+export function getDeviBySlug(slug: string): Devi | undefined {
+  return devis.find((d) => d.slug === slug);
+}

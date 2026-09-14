@@ -1,16 +1,65 @@
-import { useState } from 'react';
-import { devis } from './devis';
+import { useState, useEffect, useCallback } from 'react';
+import { devis, getDeviBySlug } from './devis';
 import DeviDetail from './DeviDetail';
 
-export default function App() {
-  const [selectedDeviId, setSelectedDeviId] = useState<number | null>(null);
+const BASE = '/Devishakti_deploy/';
 
-  const selectedDevi = selectedDeviId !== null
-    ? devis.find((d) => d.id === selectedDeviId) ?? null
+function getCurrentSlug(): string | null {
+  if (window.location.hash && window.location.hash.length > 1) {
+    return window.location.hash.slice(1);
+  }
+  const path = window.location.pathname;
+  const prefix = BASE.endsWith('/') ? BASE : BASE + '/';
+  if (!path.startsWith(prefix)) return null;
+  const rest = path.slice(prefix.length).replace(/\/+$/, '');
+  if (!rest) return null;
+  return rest;
+}
+
+function navigateToSlug(slug: string | null) {
+  const url = slug ? `${BASE}${slug}` : BASE;
+  if (window.location.hash) {
+    window.history.replaceState({}, '', BASE);
+  }
+  window.history.pushState({}, '', url);
+  window.dispatchEvent(new PopStateEvent('popstate'));
+}
+
+export default function App() {
+  const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+
+  useEffect(() => {
+    setSelectedSlug(getCurrentSlug());
+  }, []);
+
+  useEffect(() => {
+    const onPop = () => setSelectedSlug(getCurrentSlug());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  const selectedDevi = selectedSlug
+    ? getDeviBySlug(selectedSlug) ?? null
     : null;
 
+  const handleSelect = useCallback((slug: string) => {
+    navigateToSlug(slug);
+  }, []);
+
+  const handleBack = useCallback(() => {
+    navigateToSlug(null);
+  }, []);
+
+  useEffect(() => {
+    if (selectedDevi) {
+      document.title = `${selectedDevi.name} · Ashtadasha Shakti Peetha`;
+    } else {
+      document.title = '18 Shakti Peetha Devis';
+    }
+  }, [selectedDevi]);
+
   if (selectedDevi) {
-    return <DeviDetail devi={selectedDevi} onBack={() => setSelectedDeviId(null)} />;
+    return <DeviDetail devi={selectedDevi} onBack={handleBack} />;
   }
 
   return (
@@ -40,7 +89,7 @@ export default function App() {
               key={devi.id}
               className="divine-tile"
               style={{ ['--card-accent' as string]: devi.color }}
-              onClick={() => setSelectedDeviId(devi.id)}
+              onClick={() => handleSelect(devi.slug)}
               aria-label={`View ${devi.name}`}
             >
               <div className="divine-tile-image-frame">
@@ -68,13 +117,13 @@ export default function App() {
               key={devi.id}
               className="devi-card"
               style={{ ['--card-accent' as string]: devi.color }}
-              onClick={() => setSelectedDeviId(devi.id)}
+              onClick={() => handleSelect(devi.slug)}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
-                  setSelectedDeviId(devi.id);
+                  handleSelect(devi.slug);
                 }
               }}
             >
