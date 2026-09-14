@@ -15,7 +15,7 @@ import devi14 from './devi-14-manikyamba.webp';
 import devi15 from './devi-15-puruhutika.webp';
 import devi16 from './devi-16-biraja.webp';
 import devi17 from './devi-17-ekaveerika.webp';
-import devi18 from './devi-18-bamleshwari.png';
+import devi18 from './devi-18-bamleshwari-hd.webp';
 
 export interface Devi {
   id: number;
