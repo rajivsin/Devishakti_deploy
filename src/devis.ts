@@ -133,7 +133,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 6,
-    name: 'Kamakhya',
+    name: 'Maa Kamakhya',
     shaktiPeetha: 'Guwahati, Assam',
     location: 'Assam',
     description: 'Tantric goddess of desire and creation, the bleeding goddess of Assam.',
@@ -146,7 +146,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 7,
-    name: 'Kamakshi',
+    name: 'Maa Kamakshi',
     shaktiPeetha: 'Kanchipuram, Tamil Nadu',
     location: 'Tamil Nadu',
     description: 'The goddess whose eyes are full of love, holding a sugarcane bow and arrows.',
@@ -159,7 +159,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 8,
-    name: 'Bhramaramba',
+    name: 'Maa Bhramaramba',
     shaktiPeetha: 'Srisailam, Andhra Pradesh',
     location: 'Andhra Pradesh',
     description: 'Goddess in the form of a bee, the divine mother of Srisailam.',
@@ -172,7 +172,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 9,
-    name: 'Chamundeshwari',
+    name: 'Maa Chamundeshwari',
     shaktiPeetha: 'Mysuru, Karnataka',
     location: 'Karnataka',
     description: 'Slayer of demons Chanda and Munda, riding a lion on Chamundi Hill.',
@@ -185,7 +185,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 10,
-    name: 'Jogulamba',
+    name: 'Maa Jogulamba',
     shaktiPeetha: 'Alampur, Telangana',
     location: 'Telangana',
     description: 'Fierce goddess with scorpion symbolism, one of the Ashtadasha Shakti Peethas.',
@@ -198,7 +198,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 11,
-    name: 'Vishalakshi',
+    name: 'Maa Vishalakshi',
     shaktiPeetha: 'Varanasi, Uttar Pradesh',
     location: 'Uttar Pradesh',
     description: 'The large-eyed goddess worshipped at the sacred ghats of the Ganges.',
@@ -211,7 +211,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 12,
-    name: 'Mangala Gauri',
+    name: 'Maa Mangala Gauri',
     shaktiPeetha: 'Gaya, Bihar',
     location: 'Bihar',
     description: 'The auspicious four-armed goddess, worshipped for wellbeing and fortune.',
@@ -224,7 +224,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 13,
-    name: 'Jwalamukhi',
+    name: 'Maa Jwalamukhi',
     shaktiPeetha: 'Kangra, Himachal Pradesh',
     location: 'Himachal Pradesh',
     description: 'The flaming goddess, where eternal blue flames burn from the rock as her tongue.',
@@ -237,7 +237,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 14,
-    name: 'Manikyamba',
+    name: 'Maa Manikyamba',
     shaktiPeetha: 'Draksharamam, Andhra Pradesh',
     location: 'Andhra Pradesh',
     description: 'The ruby-hued goddess, with precious gem symbolism at Draksharamam.',
@@ -250,7 +250,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 15,
-    name: 'Puruhutika',
+    name: 'Maa Puruhutika',
     shaktiPeetha: 'Pithapuram, Andhra Pradesh',
     location: 'Andhra Pradesh',
     description: 'Goddess who fulfills all desires, the beloved deity of Pithapuram.',
@@ -263,7 +263,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 16,
-    name: 'Biraja',
+    name: 'Maa Biraja',
     shaktiPeetha: 'Jajpur, Odisha',
     location: 'Odisha',
     description: 'Fierce goddess with a spear, riding a buffalo, the presiding deity of Jajpur.',
@@ -276,7 +276,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 17,
-    name: 'Ekaveerika',
+    name: 'Maa Ekaveerika',
     shaktiPeetha: 'Mahur, Maharashtra',
     location: 'Maharashtra',
     description: 'Fierce form of the goddess Renuka, mother of Parashurama, at Mahur.',
@@ -289,7 +289,7 @@ const devisData: DeviData[] = [
   },
   {
     id: 18,
-    name: 'Bamleshwari',
+    name: 'Maa Bamleshwari',
     shaktiPeetha: 'Dongargarh, Chhattisgarh',
     location: 'Chhattisgarh',
     description: 'The divine Mother Goddess of Dongargarh, a form of Durga Devi, atop a 1,600-foot hill.',
