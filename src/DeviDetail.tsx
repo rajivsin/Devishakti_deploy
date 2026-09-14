@@ -1,5 +1,4 @@
 import type { Devi } from './devis';
-import panorama from './18-shakti-devis-divine-panorama-v6.webp';
 
 interface DeviDetailProps {
   devi: Devi;
@@ -7,11 +6,6 @@ interface DeviDetailProps {
 }
 
 export default function DeviDetail({ devi, onBack }: DeviDetailProps) {
-  const cellWidth = 100 / 6;
-  const cellHeight = 100 / 3;
-  const left = (devi.gridPosition.col - 1) * cellWidth;
-  const top = (devi.gridPosition.row - 1) * cellHeight;
-
   return (
     <div className="app">
       <header className="detail-header" style={{ ['--card-accent' as string]: devi.color }}>
@@ -23,15 +17,10 @@ export default function DeviDetail({ devi, onBack }: DeviDetailProps) {
 
       <section className="detail-content">
         <div className="detail-image-frame">
-          <div
-            className="detail-image-crop"
-            style={{
-              backgroundImage: `url(${panorama})`,
-              backgroundPosition: `${left}% ${top}%`,
-              backgroundSize: `${6 * 100}% ${3 * 100}%`,
-            }}
-            aria-label={`Image of ${devi.name}`}
-            role="img"
+          <img
+            className="detail-image"
+            src={devi.image}
+            alt={`Image of ${devi.name}`}
           />
         </div>
 

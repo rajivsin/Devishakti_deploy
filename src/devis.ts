@@ -1,4 +1,58 @@
+import devi01 from './devi-01-mahalakshmi.webp';
+import devi02 from './devi-02-mahadurga.webp';
+import devi03 from './devi-03-mahakali.webp';
+import devi04 from './devi-04-mahasaraswati.webp';
+import devi05 from './devi-05-mahaparvati.webp';
+import devi06 from './devi-06-kamakhya.webp';
+import devi07 from './devi-07-kamakshi.webp';
+import devi08 from './devi-08-bhramaramba.webp';
+import devi09 from './devi-09-chamundeshwari.webp';
+import devi10 from './devi-10-jogulamba.webp';
+import devi11 from './devi-11-vishalakshi.webp';
+import devi12 from './devi-12-mangala-gauri.webp';
+import devi13 from './devi-13-jwalamukhi.webp';
+import devi14 from './devi-14-manikyamba.webp';
+import devi15 from './devi-15-puruhutika.webp';
+import devi16 from './devi-16-biraja.webp';
+import devi17 from './devi-17-ekaveerika.webp';
+import devi18 from './devi-18-lalita-madhaveshwari.webp';
+
 export interface Devi {
+  id: number;
+  name: string;
+  shaktiPeetha: string;
+  location: string;
+  description: string;
+  color: string;
+  gridPosition: { col: number; row: number };
+  longDescription: string;
+  sourceName: string;
+  sourceUrl: string;
+  image: string;
+}
+
+const deviImages: Record<number, string> = {
+  1: devi01,
+  2: devi02,
+  3: devi03,
+  4: devi04,
+  5: devi05,
+  6: devi06,
+  7: devi07,
+  8: devi08,
+  9: devi09,
+  10: devi10,
+  11: devi11,
+  12: devi12,
+  13: devi13,
+  14: devi14,
+  15: devi15,
+  16: devi16,
+  17: devi17,
+  18: devi18,
+};
+
+interface DeviData {
   id: number;
   name: string;
   shaktiPeetha: string;
@@ -11,7 +65,7 @@ export interface Devi {
   sourceUrl: string;
 }
 
-export const devis: Devi[] = [
+const devisData: DeviData[] = [
   {
     id: 1,
     name: 'Mahalakshmi',
@@ -247,3 +301,8 @@ export const devis: Devi[] = [
     sourceUrl: 'https://en.wikipedia.org/wiki/Prayagraj',
   },
 ];
+
+export const devis: Devi[] = devisData.map((d) => ({
+  ...d,
+  image: deviImages[d.id],
+}));
