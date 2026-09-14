@@ -9,13 +9,13 @@ import devi08 from './devi-08-bhramaramba.webp';
 import devi09 from './devi-09-chamundeshwari.webp';
 import devi10 from './devi-10-jogulamba.webp';
 import devi11 from './devi-11-vishalakshi.webp';
-import devi12 from './devi-12-mangala-gauri.webp';
+import devi12 from './devi-12-mangala-gauri-v2.webp';
 import devi13 from './devi-13-jwalamukhi.webp';
 import devi14 from './devi-14-manikyamba.webp';
 import devi15 from './devi-15-puruhutika.webp';
 import devi16 from './devi-16-biraja.webp';
 import devi17 from './devi-17-ekaveerika.webp';
-import devi18 from './devi-18-lalita-madhaveshwari.webp';
+import devi18 from './devi-18-bamleshwari.webp';
 
 export interface Devi {
   id: number;
@@ -289,16 +289,16 @@ const devisData: DeviData[] = [
   },
   {
     id: 18,
-    name: 'Lalita Madhaveshwari',
-    shaktiPeetha: 'Prayagraj, Uttar Pradesh',
-    location: 'Uttar Pradesh',
-    description: 'The beautiful playful goddess, consort of Madhava, at the Triveni Sangam.',
+    name: 'Bamleshwari',
+    shaktiPeetha: 'Dongargarh, Chhattisgarh',
+    location: 'Chhattisgarh',
+    description: 'The divine Mother Goddess of Dongargarh, a form of Durga Devi, atop a 1,600-foot hill.',
     color: '#D4A537',
     gridPosition: { col: 6, row: 3 },
     longDescription:
-      'The Lalita Madhaveshwari Temple at Prayagraj (Allahabad), Uttar Pradesh, is associated with the Triveni Sangam — the sacred confluence of the Ganges, Yamuna, and the mythical Saraswati rivers. The goddess is worshipped as the beautiful and playful consort of Madhava (Vishnu). Prayagraj is one of the four sites of the Kumbh Mela, the largest pilgrimage gathering in the world. The Shakta tradition associates this site with the fingers of Sati, making it a revered destination for devotees of the Divine Mother.',
-    sourceName: 'Wikipedia - Prayagraj',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Prayagraj',
+      'The Maa Bamleshwari Temple at Dongargarh in Rajnandgaon district, Chhattisgarh, is situated on a hilltop at 1,600 feet. The temple is referred to as Badi Bamleshwari, while another temple at ground level is known as Chhotti Bamleshwari. The name Dongargarh is derived from "Dongar" meaning mountains and "garh" meaning fort. According to legend, the name evolved from Maa Bagulamukhi to Maa Bamlai to Maa Bamleshwari over centuries. It is believed that around 2,500 years ago, Raja Veersen constructed the temple here after being blessed with a son through the grace of Lord Shiva and Parvati. The goddess is revered as a form of Durga Devi and attracts devotees seeking blessings and fulfillment of their wishes.',
+    sourceName: 'Wikipedia - Bambleshwari Temple',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Bambleshwari_Temple',
   },
 ];
 

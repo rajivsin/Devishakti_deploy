@@ -232,6 +232,13 @@ body {
   height: auto;
 }
 
+.panorama-overlay {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
 
 /* ===== Devis Grid ===== */
 .devis-section {

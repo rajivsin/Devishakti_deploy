@@ -3,6 +3,19 @@ import { devis } from './devis';
 import panorama from './18-shakti-devis-divine-panorama-v6.webp';
 import DeviDetail from './DeviDetail';
 
+const panoramaOverlays = devis.filter((d) => d.id === 18);
+
+function getOverlayStyle(col: number, row: number) {
+  const cellWidth = 100 / 6;
+  const cellHeight = 100 / 3;
+  return {
+    left: `${(col - 1) * cellWidth}%`,
+    top: `${(row - 1) * cellHeight}%`,
+    width: `${cellWidth}%`,
+    height: `${cellHeight}%`,
+  } as const;
+}
+
 export default function App() {
   const [selectedDeviId, setSelectedDeviId] = useState<number | null>(null);
 
@@ -41,6 +54,15 @@ export default function App() {
             src={panorama}
             alt="Divine panorama showing all 18 Shakti Peetha Devis with sacred background"
           />
+          {panoramaOverlays.map((devi) => (
+            <img
+              key={`overlay-${devi.id}`}
+              className="panorama-overlay"
+              src={devi.image}
+              alt={devi.name}
+              style={getOverlayStyle(devi.gridPosition.col, devi.gridPosition.row)}
+            />
+          ))}
         </div>
       </section>
 
