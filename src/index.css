@@ -609,7 +609,7 @@ body {
   display: inline-flex;
   align-items: center;
   font-size: 0.82rem;
-  color: var(--card-accent, var(--primary));
+  color: var(--primary);
   text-decoration: none;
   letter-spacing: 0.03em;
   border-bottom: 1px solid transparent;
@@ -617,7 +617,7 @@ body {
 }
 
 .detail-source-link:hover {
-  border-color: var(--card-accent, var(--primary));
+  border-color: var(--primary);
 }
 
 /* ===== Footer ===== */
