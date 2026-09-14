@@ -1,5 +1,5 @@
 import { devis } from './devis';
-import panorama from '../public/18-shakti-devis-divine-panorama-v5.webp';
+import panorama from './18-shakti-devis-divine-panorama-v5.webp';
 
 export default function App() {
   return (
