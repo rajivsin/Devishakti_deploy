@@ -29,6 +29,13 @@ export default function App() {
             src={panorama}
             alt="Divine panorama showing all 18 Shakti Peetha Devis with sacred background"
           />
+          <div className="devi-labels-overlay">
+            {devis.map((devi) => (
+              <span key={devi.id} className="devi-label">
+                {devi.name}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

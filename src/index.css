@@ -232,6 +232,42 @@ body {
   height: auto;
 }
 
+.devi-labels-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.devi-label {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: clamp(0.5rem, 1.2vw, 0.78rem);
+  font-weight: 600;
+  color: #FFF;
+  text-align: center;
+  text-shadow:
+    0 0 4px rgba(0, 0, 0, 0.9),
+    0 1px 3px rgba(0, 0, 0, 0.8),
+    0 0 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02em;
+  opacity: 0.92;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .devi-label {
+    font-size: clamp(0.38rem, 1.6vw, 0.5rem);
+    padding-bottom: 0.2rem;
+  }
+}
+
 /* ===== Devis Grid ===== */
 .devis-section {
   padding: 4rem 1rem 6rem;
