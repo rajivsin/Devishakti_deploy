@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import { devis } from './devis';
 import panorama from './18-shakti-devis-divine-panorama-v6.webp';
+import DeviDetail from './DeviDetail';
 
 export default function App() {
+  const [selectedDeviId, setSelectedDeviId] = useState<number | null>(null);
+
+  const selectedDevi = selectedDeviId !== null
+    ? devis.find((d) => d.id === selectedDeviId) ?? null
+    : null;
+
+  if (selectedDevi) {
+    return <DeviDetail devi={selectedDevi} onBack={() => setSelectedDeviId(null)} />;
+  }
+
   return (
     <div className="app">
       <header className="hero">
@@ -34,13 +46,22 @@ export default function App() {
 
       <section id="devis" className="devis-section">
         <h2 className="section-heading">The Eighteen Mothers</h2>
-        <p className="section-subheading">Devi &amp; Their Associated Shakti Peethas</p>
+        <p className="section-subheading">Click any Devi to learn more · Devi &amp; Their Associated Shakti Peethas</p>
         <div className="devis-grid">
           {devis.map((devi) => (
             <article
               key={devi.id}
               className="devi-card"
               style={{ ['--card-accent' as string]: devi.color }}
+              onClick={() => setSelectedDeviId(devi.id)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedDeviId(devi.id);
+                }
+              }}
             >
               <div className="devi-card-header">
                 <span className="devi-number">{devi.id}</span>
@@ -49,6 +70,7 @@ export default function App() {
               <p className="devi-location">{devi.location}</p>
               <p className="devi-peetha">{devi.shaktiPeetha}</p>
               <p className="devi-description">{devi.description}</p>
+              <span className="devi-card-cta">Read more →</span>
             </article>
           ))}
         </div>
