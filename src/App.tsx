@@ -1,4 +1,5 @@
 import { devis } from './devis';
+import panorama from '../public/18-shakti-devis-divine-panorama-v5.webp';
 
 export default function App() {
   return (
@@ -25,7 +26,7 @@ export default function App() {
         <div className="divine-image-frame">
           <img
             className="divine-image"
-            src="/18-shakti-devis-divine-panorama-v5.webp"
+            src={panorama}
             alt="Divine panorama showing all 18 Shakti Peetha Devis with sacred background"
           />
         </div>
