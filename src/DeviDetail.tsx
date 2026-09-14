@@ -6,8 +6,25 @@ interface DeviDetailProps {
 }
 
 export default function DeviDetail({ devi, onBack }: DeviDetailProps) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${devi.name} — ${devi.shaktiPeetha}`,
+    description: devi.longDescription,
+    image: devi.image,
+    author: { '@type': 'Organization', name: 'Ashtadasha Devi Shakti Sthanam' },
+    publisher: { '@type': 'Organization', name: 'Ashtadasha Devi Shakti Sthanam' },
+    about: {
+      '@type': 'Place',
+      name: devi.shaktiPeetha,
+      address: devi.location,
+    },
+    inLanguage: 'en',
+  };
+
   return (
     <div className="app">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <header className="detail-header" style={{ ['--card-accent' as string]: devi.color }}>
         <button className="back-button" onClick={onBack} aria-label="Back to all Devis">
           <span className="back-arrow">←</span>

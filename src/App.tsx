@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { devis, getDeviBySlug } from './devis';
 import DeviDetail from './DeviDetail';
+import { setLandingPageMeta, setDeviMeta } from './seo';
 
 const BASE = '/Devishakti_deploy/';
 
@@ -52,9 +53,9 @@ export default function App() {
 
   useEffect(() => {
     if (selectedDevi) {
-      document.title = `${selectedDevi.name} · Ashtadasha Shakti Peetha`;
+      setDeviMeta(selectedDevi);
     } else {
-      document.title = '18 Shakti Peetha Devis';
+      setLandingPageMeta();
     }
   }, [selectedDevi]);
 
@@ -66,10 +67,10 @@ export default function App() {
     <div className="app">
       <header className="hero">
         <div className="hero-om">ॐ</div>
-        <h1 className="hero-title">Ashtadasha Shakti Peetha</h1>
-        <p className="hero-subtitle">अष्टादश शक्ति पीठ</p>
+        <h1 className="hero-title">Ashtadasha Devi Shakti Sthanam</h1>
+        <p className="hero-subtitle">अष्टादश देवी शक्ति स्थानम्</p>
         <p className="hero-tagline">
-          The eighteen divine forms of Devi Shakti, manifest across the sacred Shakti Peethas of Bharat.
+          The eighteen divine forms of Devi Shakti, manifest across the sacred Shakti Sthanam of Bharat.
           Each goddess embodies a unique aspect of the Divine Mother's boundless power and grace.
         </p>
         <div className="hero-divider">

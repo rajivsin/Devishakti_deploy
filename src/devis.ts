@@ -114,15 +114,15 @@ const devisData: DeviData[] = [
     id: 4,
     name: 'Mahasaraswati',
     slug: 'mahasaraswati',
-    shaktiPeetha: 'Sharada / Kashmir',
-    location: 'Jammu & Kashmir',
+    shaktiPeetha: 'Sri Sharadamba Temple, Sringeri',
+    location: 'Karnataka',
     description: 'Goddess of knowledge, wisdom, and arts, playing the veena, riding a swan.',
     color: '#F5F0E8',
     gridPosition: { col: 4, row: 1 },
     longDescription:
-      'Sharada Peeth, located in the Neelum Valley of Kashmir, was a ruined Hindu temple and ancient centre of learning dedicated to the goddess Sharada, the Kashmiri name for Saraswati. Between the 6th and 12th centuries CE, it was among the most prominent temple universities in South Asia. The goddess Sharada is revered as a tripartite embodiment of Shakti: Sharada (learning), Saraswati (knowledge), and Vagdevi (speech). It is believed that the right hand of Sati fell here, making it one of the 18 Maha Shakta Pithas.',
-    sourceName: 'Wikipedia - Sharada Peeth',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Sharada_Peeth',
+      'The ancient temple of Sri Sharada at Sringeri has a glorious history that begins with the setting up of the Dakshinamnaya Peetham by Sri Adi Shankaracharya. Originally it was an unpretentious shrine with the Murti of Sharada made of sandalwood, installed over the Sri Chakra that Sri Adi Shankara carved on a rock. Subsequently, Sri Bharati Krishna Tirtha and Sri Vidyaranya had a temple built in the Kerala style, with timber and tiled roof. Sri Bharati Krishna Tirtha substituted the sandalwood idol with the present golden idol. The present granite structure was raised by Sri Sacchidananda Shivabhinava Nrisimha Bharati and consecrated by Sri Chandrasekhara Bharati in May 1916. Sanctified by the worship of an unbroken succession of Acharyas, the Murti of Sri Sharada radiates grace and blessings. Navaratri is celebrated on a grand scale every year for 11 days with Shathachandi Homa Poornahuti performed on the Mahanavami day.',
+    sourceName: 'Sringeri Sharada Peetham - Sri Sharadamba',
+    sourceUrl: 'https://www.sringeri.net/temples/sri-sharadamba',
   },
   {
     id: 5,
@@ -205,8 +205,8 @@ const devisData: DeviData[] = [
     gridPosition: { col: 4, row: 2 },
     longDescription:
       'The Jogulamba Temple at Alampur, Telangana, is one of the 18 Maha Shakta Pithas. The goddess is depicted in a fierce form with scorpion symbolism. Alampur is also home to the Navabrahma temples, a group of nine temples dedicated to Shiva. The original temple was destroyed and subsequently rebuilt. Jogulamba Devi is worshipped as a powerful form of the Divine Mother, and the temple sits at the confluence of the Tungabhadra and Krishna rivers.',
-    sourceName: 'Wikipedia - Alampur',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Alampur,_Telangana',
+    sourceName: 'Wikipedia - Jogulamba Temple, Alampur',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Jogulamba_Temple,_Alampur',
   },
   {
     id: 11,
@@ -219,8 +219,8 @@ const devisData: DeviData[] = [
     gridPosition: { col: 5, row: 2 },
     longDescription:
       'The Vishalakshi Temple at Varanasi (Kashi) is one of the 18 Maha Shakta Pithas. The goddess Vishalakshi, meaning "the large-eyed one," is an aspect of Adi Shakti. According to tradition, the earrings or eyes of Sati fell at this sacred site on the banks of the Ganges. Varanasi is one of the oldest continuously inhabited cities in the world, and the Vishalakshi Temple holds great significance for Shakta devotees. The goddess is also associated with Annapurna, the provider of nourishment.',
-    sourceName: 'Wikipedia - Shakta Pithas',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Shakta_pithas',
+    sourceName: 'Wikipedia - Vishalakshi Temple',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Vishalakshi_Temple',
   },
   {
     id: 12,
@@ -233,8 +233,8 @@ const devisData: DeviData[] = [
     gridPosition: { col: 6, row: 2 },
     longDescription:
       'The Mangala Gauri Temple in Gaya, Bihar, is one of the 18 Maha Shakta Pithas. The temple is dedicated to Mangala Gauri, an auspicious form of the goddess Parvati. According to tradition, the breast of Sati fell at this location. The goddess is worshipped as the grantor of wellbeing and fortune. Gaya is also one of the most sacred places for Hindu ancestral rituals (pind daan), making the Mangala Gauri Temple a significant pilgrimage destination for both Shakta and ancestral worship.',
-    sourceName: 'Wikipedia - Shakta Pithas',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Shakta_pithas',
+    sourceName: 'Wikipedia - Mangla Gauri Temple',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Mangla_Gauri_Temple',
   },
   {
     id: 13,
@@ -261,8 +261,8 @@ const devisData: DeviData[] = [
     gridPosition: { col: 2, row: 3 },
     longDescription:
       'The Manikyamba Temple at Draksharamam, Andhra Pradesh, is one of the 18 Maha Shakta Pithas. The goddess Manikyamba, whose name means "ruby-hued," is the presiding deity alongside Bhimeshwara (Shiva). According to tradition, the left cheek of Sati fell at this site. The Draksharamam temple complex is one of the five Pancharama Kshetras dedicated to Shiva. Manikyamba Devi is associated with precious gem symbolism and is worshipped as a powerful form of the Divine Mother.',
-    sourceName: 'Wikipedia - Draksharamam',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Draksharamam',
+    sourceName: 'Sahasra Divine - Draksharamam Manikyamba Shakti Peetha',
+    sourceUrl: 'https://sahasradivine.com/draksharamam-manikyamba-shakti-peetha/',
   },
   {
     id: 15,
@@ -275,8 +275,8 @@ const devisData: DeviData[] = [
     gridPosition: { col: 3, row: 3 },
     longDescription:
       'The Puruhutika Devi Temple at Pithapuram, Andhra Pradesh, is one of the 18 Maha Shakta Pithas. The Kukkuteswara Swamy Temple houses the shrine of Puruhutika Devi. According to the Shakta pitha tradition, the back of Sati fell here, and the Peetha is known as Pushkarini Pitham. The goddess Puruhutika is believed to fulfill all desires of her devotees. Pithapuram is also known as Dakshina Kashi and is a significant pilgrimage town in Andhra Pradesh.',
-    sourceName: 'Wikipedia - Shakta Pithas',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Shakta_pithas',
+    sourceName: 'Jyotirlinga Temples - Puruhutika Devi Temple, Pithapuram',
+    sourceUrl: 'https://www.jyotirlingatemples.com/article/id/8960/temple/469/puruhutika-devi-temple-pithapuram',
   },
   {
     id: 16,
@@ -303,8 +303,8 @@ const devisData: DeviData[] = [
     gridPosition: { col: 5, row: 3 },
     longDescription:
       'The Renuka Temple at Mahur, Maharashtra, is one of the 18 Maha Shakta Pithas, known as the Moola Pitham. According to tradition, the left hand of Sati fell here. The goddess Ekaveerika is identified with Renuka, the mother of the sage Parashurama. Renuka is revered as a powerful form of the Divine Mother in Maharashtra and southern India. The temple at Mahur is situated amidst scenic hills and is an important pilgrimage destination, especially during Navratri.',
-    sourceName: 'Wikipedia - Shakta Pithas',
-    sourceUrl: 'https://en.wikipedia.org/wiki/Shakta_pithas',
+    sourceName: 'TirthaYatra - Eka Veera Temple, Mahur',
+    sourceUrl: 'https://www.tirthayatra.org/eka-veera-temple-mahur/',
   },
   {
     id: 18,

@@ -1,0 +1,16 @@
+{
+  "name": "Ashtadasha Devi Shakti Sthanam",
+  "short_name": "Devi Shakti",
+  "description": "Explore the 18 Maha Shakti Peethas of Bharat — the divine forms of Devi Shakti and their sacred temples.",
+  "start_url": "/Devishakti_deploy/",
+  "display": "standalone",
+  "background_color": "#1a1410",
+  "theme_color": "#D4A537",
+  "icons": [
+    {
+      "src": "/Devishakti_deploy/images/image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
