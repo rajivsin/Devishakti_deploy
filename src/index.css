@@ -199,44 +199,111 @@ body {
   letter-spacing: 0.05em;
 }
 
-.divine-image-frame {
-  position: relative;
+.divine-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
   max-width: 1100px;
   width: 100%;
-  border-radius: 12px;
+}
+
+.divine-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.divine-tile:hover {
+  transform: translateY(-4px);
+}
+
+.divine-tile-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
   overflow: hidden;
   border: 2px solid var(--border-gold);
-  box-shadow:
-    0 0 60px rgba(255, 153, 51, 0.15),
-    0 20px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background: var(--bg-mid);
 }
 
-.divine-image-frame::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  padding: 2px;
-  background: linear-gradient(135deg, var(--primary), transparent, var(--primary));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: 2;
+.divine-tile:hover .divine-tile-image-frame {
+  border-color: var(--card-accent, var(--primary));
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--divine-glow);
 }
 
-.divine-image {
+.divine-tile-image {
   display: block;
   width: 100%;
-  height: auto;
-}
-
-.panorama-overlay {
-  position: absolute;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: 1;
+}
+
+.divine-tile-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.divine-tile-number {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--card-accent, var(--primary));
+  border: 1px solid var(--card-accent, var(--primary));
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.divine-tile-name {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .divine-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+@media (max-width: 640px) {
+  .divine-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 0.75rem;
+  }
+  .divine-tile-name {
+    font-size: 0.72rem;
+  }
+  .divine-tile-number {
+    width: 18px;
+    height: 18px;
+    font-size: 0.62rem;
+  }
 }
 
 

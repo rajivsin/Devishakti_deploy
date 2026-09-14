@@ -1,20 +1,6 @@
 import { useState } from 'react';
 import { devis } from './devis';
-import panorama from './18-shakti-devis-divine-panorama-v6.webp';
 import DeviDetail from './DeviDetail';
-
-const panoramaOverlays = devis.filter((d) => d.id === 18);
-
-function getOverlayStyle(col: number, row: number) {
-  const cellWidth = 100 / 6;
-  const cellHeight = 100 / 3;
-  return {
-    left: `${(col - 1) * cellWidth}%`,
-    top: `${(row - 1) * cellHeight}%`,
-    width: `${cellWidth}%`,
-    height: `${cellHeight}%`,
-  } as const;
-}
 
 export default function App() {
   const [selectedDeviId, setSelectedDeviId] = useState<number | null>(null);
@@ -48,20 +34,27 @@ export default function App() {
       <section className="divine-image-section">
         <h2 className="section-heading">The Divine Panorama</h2>
         <p className="section-subheading">All 18 Forms of the Mother in One Sacred Vision</p>
-        <div className="divine-image-frame">
-          <img
-            className="divine-image"
-            src={panorama}
-            alt="Divine panorama showing all 18 Shakti Peetha Devis with sacred background"
-          />
-          {panoramaOverlays.map((devi) => (
-            <img
-              key={`overlay-${devi.id}`}
-              className="panorama-overlay"
-              src={devi.image}
-              alt={devi.name}
-              style={getOverlayStyle(devi.gridPosition.col, devi.gridPosition.row)}
-            />
+        <div className="divine-grid">
+          {devis.map((devi) => (
+            <button
+              key={devi.id}
+              className="divine-tile"
+              style={{ ['--card-accent' as string]: devi.color }}
+              onClick={() => setSelectedDeviId(devi.id)}
+              aria-label={`View ${devi.name}`}
+            >
+              <div className="divine-tile-image-frame">
+                <img
+                  className="divine-tile-image"
+                  src={devi.image}
+                  alt={`Image of ${devi.name}`}
+                />
+              </div>
+              <div className="divine-tile-label">
+                <span className="divine-tile-number">{devi.id}</span>
+                <span className="divine-tile-name">{devi.name}</span>
+              </div>
+            </button>
           ))}
         </div>
       </section>
